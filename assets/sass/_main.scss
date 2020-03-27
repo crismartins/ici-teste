@@ -1,0 +1,640 @@
+body{
+	background: $white;
+}
+.master-cover{
+	overflow: hidden;
+}
+.header{
+	&.sticky{
+		position: fixed;
+		width: 100%;
+		background: $white;
+		z-index: 5;
+	}
+	position: relative;
+	z-index: 1;
+	.navbar{
+		padding: 0;
+	.logo-top{
+		height: 60px;
+		margin: 10px;
+		.logo-blue-part{
+			fill: #005699;
+		}
+	}
+	.navbar-nav{
+		height: 100%;
+		.nav-item{
+			font-family: $font_titles;
+			font-weight: 600;
+			font-size: 1em;
+			.nav-link{
+				color: rgba($color: $darker_gray, $alpha: 0.6);
+				position: relative;
+				padding: 20px 0;
+				margin: 0 10px;
+				&::after{
+					content: '';
+					width: 100%;
+					height: 2px;
+					// position: absolute;
+					// top: 0;
+					// left: 0;
+					display: block;
+				}
+				&:hover{
+					color: $darker_gray;
+				}
+			}
+			&.active{
+				.nav-link{
+					color: $darker_gray;
+					&::after{
+						background: $nav_blue;
+					}
+				}
+			}
+		}
+	} 
+}
+
+.btn-navigation{
+	.btn.btn-primary{
+		border-radius: 0;
+		font-size: 20px;
+		width: 45px;
+    	height: 45px;
+		&:hover{
+			border-color: $white;
+		}
+	}
+	&.btn-navigation-acessibilidade{
+		.dropdown-menu{
+			padding: 10px;
+			border:0;
+			min-width: 13rem;
+			margin: 10px 0;
+			.dropdown-item{
+				display: inline-block;
+				width: auto;
+				padding: 10px;
+				line-height: 1em;
+				border-radius: 10px;
+				&:hover,&:active,&:focus{
+					background: rgba($color: $nav_blue, $alpha: 0.2);
+					color: $nav_blue;
+				}
+			}
+		}
+	}
+	&.btn-navigation-busca{
+		position: relative;
+		.dropdown-menu{
+			position: absolute;
+					right: 0;
+					top: 0;
+			padding:0;
+			border:0;
+			min-width: 13rem;
+			margin: 0;
+			height: 100%;
+			form{
+				position: relative;
+				input.form-control{
+					border: 0;
+					width: 100%;
+					padding: 10px;
+					min-height: 45px;
+					margin-right: 45px;
+				}
+				.btn{
+					position: absolute;
+					right: 0;
+					top: 0;
+					margin: 0;
+					font-size: 1.3em;
+					height: 45px;
+					color: $darker_gray;
+					opacity: 0.3;
+				}
+
+			}
+		}
+	}
+	
+}
+}
+.cover-content {
+	position: relative;
+	z-index: 0;
+	min-height: 80px;
+	height: auto;
+	.title-col{
+		padding-top: 3em;
+		padding-bottom: 3em;
+		h1{
+			position: relative;
+			padding: 0.5em 0;
+			&:after{
+				content: '';
+				display: block;
+				width: 140px;
+				height: 2px;
+				background: rgba($color: $nav_blue, $alpha: 0.2);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
+		}
+		p{
+			font-size: 1.2em;
+			max-width:450px
+		}
+	}
+	.cover-image{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		max-width: 55%;
+    z-index: -1;
+		figure{
+			position: relative;
+			margin: 0;
+			z-index: 1;
+			img{
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+		.back_graph{
+			position: absolute;
+			z-index: 0;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			right: 0;
+			svg{
+				position: absolute;
+				width: 160%;
+				bottom: -10%;
+				right: -62%;
+			}
+		}
+	}
+}
+.graphic{
+	fill: $nav_blue;
+}
+
+//*beneficios
+.section-benefits{
+	position: relative;
+	.vantagens-image{
+		position: absolute;
+		left: 0;
+		width: 90%;
+		z-index: 2;
+	}
+}
+//* soluções
+.section-solutions{
+	background: $nav_blue;
+	color: $white;
+	position: relative;
+	&:before{
+		content: '';
+		height: 40%;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		left: 0;
+		background: $white;
+	}
+	.box-solutions{
+		background: $white;
+		margin-top: 5% ;
+		border-radius: 10px;
+		position: relative;
+		z-index: 2;
+
+		.nav-box-solutions{
+			background: $white;
+			border-radius: 10px 0 0 10px;
+			padding: 20px 0 20px 20px;
+			.nav-link{
+				padding: 10px 0;
+				color: rgba($color: $darker_gray, $alpha: 0.6);
+				font-family: $font_titles;
+				font-weight: 600;
+				font-size: 1.2em;
+				border-radius: 0;
+				position: relative;
+				&:before{
+					content: '';
+					height: 2px;
+					width: 100%;
+					position: absolute;
+					left: 0;
+					bottom: 0;
+				}
+				&:hover{
+					color: $darker_gray;
+				}
+				&.active{
+					background: transparent;
+					color: $darker_gray;
+					&.adm-fin:before{
+							background: $adm_color;
+					}
+					&.cidadao:before{
+						background: $cid_color;
+					}
+					&.educacao:before{
+						background: $edu_color;
+					}
+					&.mobilidade:before{
+						background: $mob_color;
+					}
+					&.saude:before{
+						background: $saud_color;
+					}
+					&.servicos:before{
+						background: $serv_color;
+					}
+					&.tributaria:before{
+						background: $trib_color;
+					}
+					&.web:before{
+						background: $web_color;
+					}
+
+				}
+			}
+		}
+		
+		.content-box-solutions{
+			position: relative;
+			.content{
+				position: relative;
+				z-index: 1;
+			}
+			.tab-pane{
+				padding: 30px 20px;				
+				&:before{
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					content: '';
+					top: 0;
+					left: 0;
+					border-radius: 0 10px 10px 0;
+				}
+				&.adm-fin:before{
+					background: $adm_color;
+				}
+				&.cidadao:before{
+					background: $cid_color;
+				}
+				&.educacao:before{
+					background: $edu_color;
+				}
+				&.mobilidade:before{
+					background: $mob_color;
+				}
+				&.saude:before{
+					background: $saud_color;
+				}
+				&.servicos:before{
+					background: $serv_color;
+				}
+				&.tributaria:before{
+					background: $trib_color;
+				}
+				&.web:before{
+					background: $web_color;
+				}
+			}
+			
+			.image{
+				position: inherit;
+				figure{
+					position: absolute;
+					bottom: 0;
+					img{
+						display: block;
+					}
+				}
+			}
+		}
+	}
+}
+
+//*section newsletter
+.section-newsletter{
+	input{
+		border-color: rgba($color: $second_darker_gray, $alpha: 0.05);
+		border-radius: 10px;
+		min-height: 60px;
+		font-size: 1.2em;
+		min-width: 300px;
+	}
+}
+
+//*footer
+.master-footer{
+	position: relative;
+	.goto-top{
+		background: $white;
+		position: absolute;
+		top: -30px;
+		width: 60px;
+		height: 60px;
+		right: 20px;
+		border-radius: 50px;
+		text-align: center;
+		font-size: 2em;
+		color: $darker_gray;
+		padding: 10px;
+		&:hover{
+			background: $nav_blue;
+			color: $white;
+		}
+	}
+	background: $second_darker_gray;
+	color: $white;
+	.logo-footer{
+		opacity: 0.6;
+		width: 100%;
+		margin: 20px 0;
+		.logo-blue-part,.logo-black-part{
+			fill: $white;
+		}
+	}
+	.sobre-rdp{
+		color: $white;
+		display: block;
+		font-size: 1em;
+		padding: 20px 0;
+		strong{
+			opacity: 1;
+			display: inline-block;
+		}
+
+	}
+	.tel{
+		display: block;
+		color: $white;
+		padding-bottom: 10px;
+		font-size: 1.4em;
+		span{
+			font-size: 0.8em;
+		}
+	}
+	.certificacaoes{
+		.certificacaoes-content{
+			text-align: center;
+			.image{
+				margin: 20px 0;
+				max-height: 80px;
+				display: inline-block;
+			}
+
+		}
+	}
+	
+	h5{
+		text-transform: uppercase;
+		font-size: 1.2em;
+		padding-top: 20px;
+	}
+	.links-list{
+		margin: 12px 0;
+		li{
+			a{
+				display: inline-block;
+				padding: 10px 0;
+				color: $white;
+				opacity: 0.6;
+				font-size: 1em;
+				&:hover{
+					opacity: 1;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+	.social-links{
+		margin: 20px 0;
+		li{
+			display: inline-block;
+			padding-right: 5px;
+			padding-bottom: 10px;
+			a{
+				display: block;
+				font-size: 18px;
+				text-align: center;
+				border-radius: 50px;
+				width: 45px;height: 45px;
+				line-height: auto;
+				background-color: rgba($color: $white, $alpha: 0);
+				color: $white;
+				box-shadow: none;
+				opacity: 0.6;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.foot{
+		border-top: 1px solid rgba($color: $white, $alpha: 0.2);
+		.copyright{
+			font-size: 0.8em;
+			opacity: 0.6;
+		}
+		.dun-brad{
+			padding: 20px 0;
+			max-width: 68px;
+		}
+	}
+}
+
+//*contrast
+body.black-theme{
+	.header{
+		&.sticky{
+			background: $darker_gray;
+		}
+	}
+	.header .navbar .logo-top .logo-blue-part,.header .navbar .logo-top .logo-black-part{
+		fill: $white;
+	}
+	.header .navbar .navbar-nav .nav-item .nav-link,.section-solutions .box-solutions .nav-box-solutions .nav-link{
+		color: rgba($color: $white, $alpha: 0.6);
+	}
+	.header .navbar .navbar-nav .nav-item.active .nav-link,.header .navbar .navbar-nav .nav-item .nav-link:hover,.section-solutions .box-solutions .nav-box-solutions .nav-link.active,.section-solutions .box-solutions .nav-box-solutions .nav-link:hover,.master-footer .goto-top{
+		color: $white;
+	}
+	.header .navbar .navbar-nav .nav-item.active .nav-link::after,.cover-content .title-col h1:after{
+		background: $blue_green;
+	}
+	.graphic{
+		fill: $blue_green;
+	}
+	.section-solutions{
+		background: $darker_gray;
+	}
+	.section-solutions:before,.section-solutions .box-solutions .nav-box-solutions,.section-solutions .box-solutions,.master-footer .goto-top{
+		background: $second_darker_gray;
+	}
+}
+
+
+.navbar-toggler{
+	padding: 10px;
+	&:focus{
+		box-shadow: 0;
+		outline: none;
+	}
+}
+
+.busca-mobile{
+			form{
+				border-radius: 10px;
+				position: relative;
+				margin: 20px 0;
+				input.form-control{
+					border: 0;
+					width: 100%;
+					padding: 10px;
+					min-height: 45px;
+					margin-right: 45px;
+				}
+				.btn{
+					position: absolute;
+					right: 0;
+					top: 0;
+					margin: 0;
+					font-size: 1.3em;
+					height: 45px;
+					color: $darker_gray;
+					opacity: 0.3;
+				}
+
+			}
+		}
+
+/*
+ Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media screen and (max-width: 767px) {
+
+	.header .navbar {
+		.navbar-nav .nav-item{
+			font-size: 1.5em;
+			padding: 0;
+			.nav-link{
+				padding: 10px 0;
+			}
+		}
+	}
+	.cover-content .title-col h1{
+		padding-bottom: 0;
+		&:after{
+			display: inline-block;
+			position: inherit;
+		}
+	}
+	.master-cover .cover-content .cover-image{
+		position: relative;
+		max-width: 100%;
+	}
+	.mobile-image{
+		&:before{
+			content: '';
+			width: 100%;
+			height: 50%;
+			position: absolute;
+			left: 0;
+			background: $nav_blue;
+			bottom: -60px;
+			z-index: -1;
+		}
+	}
+	.section-solutions .box-solutions{
+		overflow: hidden;
+		.content-box-solutions{
+			.tab-pane:before{
+				border-radius: 0;
+			}
+			.image figure{
+				opacity: 0.2;
+				z-index: 0;
+				max-height: 100%;
+				max-width: 100%;
+			}
+		} 
+		.nav-box-solutions{
+			padding: 10px;
+			.nav{
+				display: block;
+				text-align: center;
+				.nav-link{
+					display: inline-block;
+					padding: 10px;
+					font-size: 1em;
+				}
+			}
+		} 
+	}
+	.master-footer h5{
+		border-bottom: 1px solid rgba($color: $white, $alpha: 0.2);
+		padding: 10px 0;
+	}
+	.social-links{
+		text-align: center;
+	}
+	.foot{
+		.justify-content-end.d-flex{
+			text-align: center;
+			display: inline-block !important;
+		}
+	}
+}
+
+/* 
+ Com uma largura mínima de 992 pixels. Monitores por exemplo.
+*/
+@media screen and (max-width: 992px) {
+	.header{
+		.navbar-brand{
+			padding: 0;
+			margin: 0;
+		}
+		.navbar{
+			padding: 0 15px;
+		}
+		.btn.btn-primary{
+			background: transparent;
+			box-shadow: none;
+			color: $darker_gray;
+			border:0;
+		}
+		.btn-navigation.btn-navigation-busca .dropdown-menu {
+			top: 55px;
+			min-width: 15rem;
+		}
+		
+	} 
+  
+}
+
+/* 
+ Dispositivos com largura mínima de 1200 pixels. Por exemplo TVs.
+*/
+@media screen and (max-width: 1200px) {
+  
+}
+
+

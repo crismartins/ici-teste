@@ -1,0 +1,231 @@
+$font_titles:'Muli', sans-serif;
+$font_content:'Open Sans', sans-serif;
+*{
+	outline: none;
+}
+
+
+//Cores
+$darker_gray:#211F31;
+$second_darker_gray:#2A2741;
+$white:#ffffff;
+$lighter_gray:#F5F4FF;
+$nav_blue:#3949C6;
+$blue_green:#00FFFF;
+
+$adm_color: #B7B5BF;
+$cid_color: #ABB9E2;
+$edu_color: #6BCEEB;
+$mob_color: #5FD6CD;
+$saud_color: #3ADE99;
+$serv_color: #A091F8;
+$trib_color: #F88697;
+$web_color: #3D6AD0;
+
+h1,h2,h3,h4,h5,h6{
+	font-family: $font_titles;
+	font-weight: 900;
+}
+h1{
+	font-size:3em ;
+}
+h2{
+	font-size: 2em;
+}
+p{
+	opacity: 0.8;
+	font-size: 1em;
+	line-height: 2em;
+	margin: 2em 0;
+}
+ul,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+figure{
+	margin: 0;
+}
+img{
+	max-width: 100%;
+}
+
+body{
+	font-family: $font_content;
+	font-size: 14px;
+	color: $darker_gray;
+}
+
+.box-shadow{
+	box-shadow: 0 5px 20px 0 rgba($color: $nav_blue, $alpha: 0.3);
+	-webkit-box-shadow: 0 5px 20px 0 rgba($color: $nav_blue, $alpha: 0.3);
+	-moz-box-shadow: 0 5px 20px 0 rgba($color: $nav_blue, $alpha: 0.3);
+	-o-box-shadow: 0 5px 20px 0 rgba($color: $nav_blue, $alpha: 0.3);
+}
+
+
+.gradient-gray-diagonal{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$white+0,660e4b+100 */
+background: $white; /* Old browsers */
+background: -moz-linear-gradient(-45deg,  $white 0%, $lighter_gray 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg,  $white 0%,$lighter_gray 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg,  $white 0%,$lighter_gray 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='$lighter_gray',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+.gradient-gray-horizontal{
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$white+0,660e4b+100 */
+background: $white; /* Old browsers */
+background: -moz-linear-gradient(top,  $white 0%, $lighter_gray 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  $white 0%,$lighter_gray 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  $white 0%,$lighter_gray 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='$lighter_gray',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.btn{
+	font-size: 1em;
+	font-weight: 800;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	font-family: $font_titles;
+	&.btn-lg{
+		border-radius: 50px;
+		padding: 16px 30px;
+		margin: 10px 0;
+	}
+	&.btn-primary{
+		background: $nav_blue;
+		color: $white;
+		border-color: $nav_blue;
+		box-shadow: 0 5px 20px 0 rgba($color: $nav_blue, $alpha: 0.3);
+		&:hover,&:active,&:focus,&:not(:disabled):not(.disabled):active{
+			background: $nav_blue;
+		color: $white;
+		box-shadow: 0 5px 25px 0 rgba($color: $nav_blue, $alpha: 0.8);
+		}
+	}
+	&.btn-secondary{
+		background: $white;
+		color: $nav_blue;
+		border-color: $white;
+		box-shadow: 0 5px 20px 0 rgba($color: $nav_blue, $alpha: 0.3);
+		&:hover,&:active,&:focus,&:not(:disabled):not(.disabled):active{
+			background: $white;
+			color: $nav_blue;
+		border-color: $white;
+		box-shadow: 0 5px 25px 0 rgba($color: $nav_blue, $alpha: 0.8);
+		}
+	}
+}
+
+
+.section-spacing{
+	padding: 60px 0;
+}
+
+body.black-theme{
+	color: $white;
+	background: $second_darker_gray;
+	
+	.box-shadow{
+		box-shadow: 0 5px 20px 0 rgba($color: $darker_gray, $alpha: 0.3);
+		-webkit-box-shadow: 0 5px 20px 0 rgba($color: $darker_gray, $alpha: 0.3);
+		-moz-box-shadow: 0 5px 20px 0 rgba($color: $darker_gray, $alpha: 0.3);
+		-o-box-shadow: 0 5px 20px 0 rgba($color: $darker_gray, $alpha: 0.3);
+	}
+	
+	
+	.gradient-gray-diagonal{
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$white+0,660e4b+100 */
+	background: $second_darker_gray; /* Old browsers */
+	background: -moz-linear-gradient(-45deg,  $second_darker_gray 0%, $darker_gray 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg,  $second_darker_gray 0%,$darker_gray 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg,  $second_darker_gray 0%,$darker_gray 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='$lighter_gray',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	}
+	.gradient-gray-horizontal{
+		/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/$white+0,660e4b+100 */
+	background: $second_darker_gray; /* Old browsers */
+	background: -moz-linear-gradient(top,  $second_darker_gray 0%, $darker_gray 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  $second_darker_gray 0%,$darker_gray 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  $second_darker_gray 0%,$darker_gray 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$white', endColorstr='$lighter_gray',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	
+	}
+	
+	.btn{
+		&.btn-primary{
+			background: $blue_green;
+			color: $second_darker_gray;
+			border-color: $blue_green;
+			box-shadow: 0 5px 20px 0 rgba($color: $blue_green, $alpha: 0.1);
+			&:hover,&:active,&:focus,&:not(:disabled):not(.disabled):active{
+				background: $blue_green;
+			color: $second_darker_gray;
+			box-shadow: 0 5px 25px 0 rgba($color: $blue_green, $alpha: 0.5);
+			}
+		}
+		&.btn-secondary{
+			background: transparent;
+			color: $blue_green;
+			border: 2px solid $blue_green;
+			box-shadow: 0 5px 20px 0 rgba($color: $blue_green, $alpha: 0.1);
+			&:hover,&:active,&:focus,&:not(:disabled):not(.disabled):active{
+				background: $blue_green;
+				color: $second_darker_gray;
+			border-color: $blue_green;
+			box-shadow: 0 5px 25px 0 rgba($color: $blue_green, $alpha: 0.5);
+			}
+		}
+	}
+
+}
+
+/*
+ Pra dispositivos que tem uma largura mínima de 768 pixels. Tablets, por exemplo.
+*/
+@media screen and (max-width: 768px) {
+	
+	h1,h2,h3{
+		text-align: center;
+	}
+	h1{
+		font-size: 2.2em;
+	}
+	h2{
+		font-size: 2em;
+	}
+	p{
+		text-align: center;
+	}
+	.btn.btn-lg{
+		display: block;
+		width: 100%;
+		&.mr-4{
+			margin-right: 0 !important;
+		}
+		margin:20px 0;
+	}
+	.form-group{
+		width: 100%;
+	}
+}
+
+/* 
+ Com uma largura mínima de 992 pixels. Monitores por exemplo.
+*/
+@media screen and (max-width: 992px) {
+  
+}
+
+/* 
+ Dispositivos com largura mínima de 1200 pixels. Por exemplo TVs.
+*/
+@media screen and (max-width: 1200px) {
+  
+}
+
+
+
