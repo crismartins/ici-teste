@@ -277,6 +277,10 @@ body{
 			.content{
 				position: relative;
 				z-index: 1;
+
+				h3{
+					font-size: 1.75em;
+				}
 			}
 			.tab-pane{
 				padding: 30px 20px;				
@@ -352,7 +356,7 @@ body{
 		right: 20px;
 		border-radius: 50px;
 		text-align: center;
-		font-size: 2em;
+		font-size: 26px;
 		color: $darker_gray;
 		padding: 10px;
 		&:hover{
@@ -431,7 +435,7 @@ body{
 			padding-bottom: 10px;
 			a{
 				display: block;
-				font-size: 18px;
+				font-size: 20px;
 				text-align: center;
 				border-radius: 50px;
 				width: 45px;height: 45px;
@@ -482,11 +486,14 @@ body.black-theme{
 	.graphic{
 		fill: $blue_green;
 	}
-	.section-solutions{
+	.section-solutions,.mobile-image:before{
 		background: $darker_gray;
 	}
 	.section-solutions:before,.section-solutions .box-solutions .nav-box-solutions,.section-solutions .box-solutions,.master-footer .goto-top{
 		background: $second_darker_gray;
+	}
+	.header .btn-navigation .btn.btn-primary:hover{
+		border-color: $second_darker_gray;
 	}
 }
 
